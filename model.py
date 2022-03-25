@@ -3,7 +3,7 @@ from torch import nn
 from torch.utils import model_zoo
 
 
-class Model(nn.Module):
+class RGBLNet(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
         self.vgg = VGG()
