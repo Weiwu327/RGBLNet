@@ -2,7 +2,7 @@ import torch
 from torch.utils import data
 from dataset import Dataset
 from matplotlib import pyplot as plt
-from RGBLNet import Model
+from model import RGBLNet
 import os
 import argparse
 
@@ -18,7 +18,7 @@ test_loader = data.DataLoader(test_dataset, batch_size=1, shuffle=False)
 
 device = torch.device('cuda:' + str(args.gpu))
 
-model = Model().to(device)
+model = RGBLNet().to(device)
 
 checkpoint = torch.load(os.path.join(args.save_path, 'checkpoint_best.pth'))
 model.load_state_dict(checkpoint['model'])
