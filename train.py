@@ -4,7 +4,7 @@ from torch import optim
 from torch.utils import data
 from dataset import Dataset
 
-from RGBLNet import Model
+from model import RGBLNet
 
 from tensorboardX import SummaryWriter
 import os
@@ -30,7 +30,7 @@ test_loader = data.DataLoader(test_dataset, batch_size=1, shuffle=False)
 
 device = torch.device('cuda:' + str(args.gpu))
 
-model = Model().to(device)
+model = RGBLNet().to(device)
 
 writer = SummaryWriter(args.log_path)
 
