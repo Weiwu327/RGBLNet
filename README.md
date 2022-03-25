@@ -29,12 +29,14 @@ For testing, run
 
 `python eval.py --data_path="path to dataset" --save_path="path to checkpoint"`
 
-## Result
+## Structure
 
-ShanghaiTech part A: epoch367 MAE 60.43 MSE 98.24
+The structure of the network. 
 
 ![](./logs/A.png)
 
-ShanghaiTech part B: epoch432 MAE 6.38 MSE 10.99
+## Result
+
+GWD + UEC: epoch187 MAE 6.38 MSE 11.80
 
 ![](./logs/B.png)
