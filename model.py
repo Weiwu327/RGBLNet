@@ -5,7 +5,7 @@ from torch.utils import model_zoo
 
 class RGBLNet(nn.Module):
     def __init__(self):
-        super(Model, self).__init__()
+        super(RGBLNet, self).__init__()
         self.vgg = VGG()
         self.load_vgg()
         self.dmp = BackEnd()
